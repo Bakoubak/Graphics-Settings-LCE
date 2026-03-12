@@ -81,7 +81,7 @@ UIScene_SettingsGraphicsMenu::UIScene_SettingsGraphicsMenu(int iPad, void *initD
 	m_sliderGraphicsMode.init(TempString, eControl_GraphicsMode, 0, 2, currentGraphics);
 
 	swprintf( (WCHAR *)TempString, 256, L"%ls: %d%%", app.GetString( IDS_SLIDER_GAMMA ),app.GetGameSettings(m_iPad,eGameSetting_Gamma));	
-	Minecraft.Client/Common/UI/UIScene_SettingsGraphicsMenu.cpp
+
 	m_sliderGamma.init(TempString,eControl_Gamma,0,100,app.GetGameSettings(m_iPad,eGameSetting_Gamma));
 
     const int initialFovSlider = app.GetGameSettings(m_iPad, eGameSetting_FOV);
