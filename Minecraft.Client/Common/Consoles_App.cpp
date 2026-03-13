@@ -1412,6 +1412,8 @@ void CMinecraftApp::ActionGameSettings(int iPad,eGameSetting eVal)
 				pMinecraft->options->set(Options::Option::AMBIENT_OCCLUSION, true);
 				if (graphicsLevel == 0) pMinecraft->options->set(Options::Option::PARTICLES, 0);
                     	}
+			if (pMinecraft && pMinecraft->levelRenderer && pMinecraft->level)
+				pMinecraft->levelRenderer->allChanged();
 		}
 		break;
 	case eGameSetting_Gamma:
